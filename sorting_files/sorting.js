@@ -57,8 +57,8 @@ let arraySize = document.querySelector('#arr_sz');
 
 // Event Listener to update the bars on the UI
 arraySize.addEventListener('input', function(){
-    console.log(arraySize.ariaValueMax, typeof(arraySize.value));
-    createNewArray(parseInt(arraySize.val));
+    console.log(arraySize.value, typeof(arraySize.value));
+    createNewArray(parseInt(arraySize.value));
 });
 
 //Default input for waitforme function (260ms)
@@ -70,7 +70,7 @@ let delayElement = document.querySelector('#speed_input');
 // Event Listener to update delay time
 delayElement.addEventListener('input', function(){
     console.log(delayElement.value, typeof(delayElement.value));
-    delay = 320 - parseInt(delayElement.val);
+    delay = 320 - parseInt(delayElement.value);
 });
 
 // Initializing Array to store randomly generated numbers
@@ -87,7 +87,7 @@ function createNewArray(noOfBars = 60){
     // Creating an array of random numbers
     array = [];
     for(let i = 0; i < noOfBars; i++){
-        array.push(Math.floor(Math.random() *250) + 1);
+        array.push(Math.floor(Math.random() * 250) + 1);
     }
     console.log(array);
 
@@ -114,7 +114,7 @@ function deleteChild(){
 // Selecting New Array button from DOM and adding EventListener
 const newArray = document.querySelector(".newArray");
 newArray.addEventListener("click", function(){
-    console.log("From newArray " + array.Size.value);
+    console.log("From newArray " + arraySize.value);
     console.log("From newArray " + delay);
     enableSortingBtn();
     enableSizeSlider();

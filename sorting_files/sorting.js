@@ -120,3 +120,8 @@ newArray.addEventListener("click", function(){
     enableSizeSlider();
     createNewArray(arraySize.value);
 })
+
+// const play_pause = document.querySelector(".pause");
+// play_pause.addEventListener("click", ()=>{
+    
+// })

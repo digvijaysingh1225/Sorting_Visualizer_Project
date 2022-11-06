@@ -5,8 +5,8 @@ async function bubble(){
         console.log('In ith loop');
         for(let j = 0; j < ele.length-i-1; j++){
             console.log('In jth loop');
-            ele[j].style.background = 'green';
-            ele[j+1].style.background = 'green';
+            ele[j].style.background = 'blue';
+            ele[j+1].style.background = 'blue';
             if(parseInt(ele[j].style.height) > parseInt(ele[j+1].style.height)){
                 console.log('In if condition');
                 await waitforme(delay);
@@ -15,13 +15,13 @@ async function bubble(){
             ele[j].style.background = 'cyan';
             ele[j+1].style.background = 'cyan';
         }
-        ele[ele.length-1-i].style.background = 'red';
+        ele[ele.length-1-i].style.background = 'green';
     }
-    ele[0].style.background = 'red';
+    ele[0].style.background = 'green';
 }
 
 const bubSortbtn = document.querySelector(".bubbleSort");
-bubSortbtn.addEventListener('click', async function(){ 
+bubSortbtn.addEventListener('click', async function(){
     disableSortingBtn();
     disableSizeSlider();
     disableNewArrayBtn();

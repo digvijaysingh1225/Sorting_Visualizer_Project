@@ -87,7 +87,7 @@ function createNewArray(noOfBars = 60){
     // Creating an array of random numbers
     array = [];
     for(let i = 0; i < noOfBars; i++){
-        array.push(Math.floor(Math.random() * 250) + 1);
+        array.push(Math.floor(Math.random() *250) + 1);
     }
     console.log(array);
 
@@ -114,7 +114,7 @@ function deleteChild(){
 // Selecting New Array button from DOM and adding EventListener
 const newArray = document.querySelector(".newArray");
 newArray.addEventListener("click", function(){
-    console.log("From newArray " + arraySize.value);
+    console.log("From newArray " + array.Size.value);
     console.log("From newArray " + delay);
     enableSortingBtn();
     enableSizeSlider();
